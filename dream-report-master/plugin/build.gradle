@@ -1,0 +1,74 @@
+dependencies {
+    // -- spigot api --
+    compileOnly 'org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT'
+
+    // -- bukkit plugin.yml replacer --
+    compileOnly "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+    annotationProcessor "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+
+    // -- configs--
+    implementation "eu.okaeri:okaeri-configs-yaml-bukkit:4.0.6"
+    implementation "eu.okaeri:okaeri-configs-serdes-bukkit:4.0.6"
+    implementation "eu.okaeri:okaeri-configs-serdes-commons:4.0.6"
+
+    // -- json configure --
+    implementation 'eu.okaeri:okaeri-configs-json-simple:4.0.6'
+
+    // -- persistence data --
+    implementation 'eu.okaeri:okaeri-persistence-flat:2.0.0-beta.1'
+    implementation 'eu.okaeri:okaeri-persistence-jdbc:2.0.0-beta.1'
+    implementation 'eu.okaeri:okaeri-persistence-redis:2.0.0-beta.1'
+    implementation 'eu.okaeri:okaeri-persistence-mongo:2.0.0-beta.1'
+
+    // -- injector --
+    implementation 'eu.okaeri:okaeri-injector:2.1.0'
+
+    // -- placeholders --
+    implementation 'eu.okaeri:okaeri-placeholders-bukkit:4.0.3'
+
+    // -- scoreboard --
+    implementation 'fr.mrmicky:fastboard:1.2.1'
+
+    // -- NMS Items helper --
+    implementation 'com.github.cryptomorin:XSeries:9.1.0'
+
+    // -- RGB-CHAT --
+    implementation 'com.iridium:IridiumColorAPI:1.0.6'
+
+    // -- dream-menu --
+    implementation "cc.dreamcode.menu:core:0.3.6"
+    implementation "cc.dreamcode.menu:bukkit:0.3.6"
+    implementation "cc.dreamcode.menu:serdes-bukkit:0.3.6"
+    implementation "cc.dreamcode.menu:serdes-bukkit-okaeri:0.3.6"
+
+    // -- lombok --
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+shadowJar {
+    checkstyleTest
+
+    archiveFileName = "Dream-Report-${project.version}_1.8-1.19.jar"
+
+    minimize()
+
+    relocate "com.cryptomorin", "cc.dreamcode.report.libs.com.cryptomorin"
+    relocate "eu.okaeri", "cc.dreamcode.report.libs.eu.okaeri"
+    relocate "fr.mrmicky.fastboard", "cc.dreamcode.report.libs.fastboard"
+    relocate "com.iridium", "cc.dreamcode.report.libs.com.iridium"
+    relocate "cc.dreamcode.menu", "cc.dreamcode.report.libs.cc.dreamcode.menu"
+
+    relocate "io.lettuce", "cc.dreamcode.report.libs.io.lettuce"
+    relocate "io.netty", "cc.dreamcode.report.libs.io.netty"
+    relocate "reactor", "cc.dreamcode.report.libs.reactor"
+    relocate "org.reactivestreams", "cc.dreamcode.report.libs.org.reactivestreams"
+    relocate "org.bson", "cc.dreamcode.report.libs.org.bson"
+    relocate "com.mongodb", "cc.dreamcode.report.libs.com.mongodb"
+    relocate "com.zaxxer", "cc.dreamcode.report.libs.com.zaxxer"
+    relocate "org.slf4j", "cc.dreamcode.report.libs.org.slf4j"
+    relocate "org.mariadb", "cc.dreamcode.report.libs.org.mariadb"
+    relocate "org.json", "cc.dreamcode.report.libs.org.json"
+}

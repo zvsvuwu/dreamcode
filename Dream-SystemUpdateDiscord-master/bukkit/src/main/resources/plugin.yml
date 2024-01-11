@@ -1,0 +1,8 @@
+main: "cc.dreamcode.updatesystem.BukkitUpdateSystemPlugin"
+version: "1.0"
+name: "Dream-SystemUpdateDiscord"
+description: "Dream-SystemUpdateDiscord written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "eastcause"
+prefix: "Dream-SystemUpdateDiscord-Bukkit"
+api-version: 1.13
