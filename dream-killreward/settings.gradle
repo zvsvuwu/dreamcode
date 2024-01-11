@@ -1,0 +1,3 @@
+rootProject.name = 'dream-killreward'
+
+include 'bukkit'

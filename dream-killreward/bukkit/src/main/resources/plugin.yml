@@ -1,0 +1,8 @@
+main: "cc.dreamcode.killreward.KillRewardPlugin"
+version: "1.0.2"
+name: "Dream-KillReward"
+description: "Dream-KillReward plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Kajteh_"
+prefix: "Dream-KillReward-Bukkit"
+api-version: 1.13
