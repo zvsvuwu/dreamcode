@@ -1,0 +1,10 @@
+main: "cc.dreamcode.timecmd.TimeCommandPlugin"
+version: "1.0"
+name: "Dream-TimeCommand"
+description: "Dream-TimeCommand written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "author"
+prefix: "Dream-TimeCommand-Bukkit"
+api-version: 1.13
+softdepend:
+  - PlaceholderAPI

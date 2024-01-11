@@ -1,0 +1,36 @@
+package cc.dreamcode.restarts.component.classes;
+
+import cc.dreamcode.restarts.component.resolvers.ComponentClassResolver;
+import cc.dreamcode.restarts.persistence.PersistenceService;
+import eu.okaeri.injector.Injector;
+import lombok.NonNull;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@SuppressWarnings("rawtypes")
+public class PersistenceServiceComponentClassResolver extends ComponentClassResolver<Class<PersistenceService>> {
+
+    @Override
+    public boolean isAssignableFrom(@NonNull Class<PersistenceService> serviceClass) {
+        return PersistenceService.class.isAssignableFrom(serviceClass);
+    }
+
+    @Override
+    public String getComponentName() {
+        return "service";
+    }
+
+    @Override
+    public Map<String, Object> getMetas(@NonNull Injector injector, @NonNull Class<PersistenceService> serviceClass) {
+        return new HashMap<>();
+    }
+
+    @Override
+    public Object resolve(@NonNull Injector injector, @NonNull Class<PersistenceService> serviceClass) {
+        final PersistenceService service = injector.createInstance(serviceClass);
+        service.loadAllToMemory();
+
+        return service;
+    }
+}

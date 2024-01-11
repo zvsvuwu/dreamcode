@@ -1,0 +1,8 @@
+main: "cc.dreamcode.home.HomePlugin"
+version: "1.0"
+name: "Dream-Home"
+description: "Dream-Home written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "author"
+prefix: "Dream-Home-Bukkit"
+api-version: 1.13

@@ -1,0 +1,12 @@
+main: "cc.dreamcode.disableeffects.BukkitDisableEffectsPlugin"
+version: "1.0"
+name: "Dream-DisableEffects"
+description: "Dream-DisableEffects written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "eastcause"
+prefix: "Dream-DisableEffects-Bukkit"
+api-version: 1.13
+depend:
+  - ProtocolLib
+softdepend:
+  - WorldGuard

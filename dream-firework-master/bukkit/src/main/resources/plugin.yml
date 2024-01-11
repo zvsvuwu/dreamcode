@@ -1,0 +1,8 @@
+main: "cc.dreamcode.firework.FireWorkPlugin"
+version: "1.4.2"
+name: "Dream-FireWork"
+description: "Dream-FireWork written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Nightusio"
+prefix: "Dream-FireWork"
+api-version: 1.13

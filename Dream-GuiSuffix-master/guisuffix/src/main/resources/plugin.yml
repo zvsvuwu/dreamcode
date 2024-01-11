@@ -1,0 +1,9 @@
+main: "cc.dreamcode.guisuffix.GuiSuffixPlugin"
+version: "1.0.2"
+name: "Dream-GuiSuffix"
+description: "Dream-GuiSuffix written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "ForeX03"
+softdepend: [LuckPerms, Vault]
+prefix: "Dream-GuiSuffix"
+api-version: 1.13

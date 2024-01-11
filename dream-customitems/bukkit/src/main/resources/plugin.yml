@@ -1,0 +1,8 @@
+main: "cc.dreamcode.customitems.CustomItemsPlugin"
+version: "1.0"
+name: "Dream-CustomItems"
+description: "Dream-CustomItems plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Kajteh_"
+prefix: "Dream-CustomItems-Bukkit"
+api-version: 1.13

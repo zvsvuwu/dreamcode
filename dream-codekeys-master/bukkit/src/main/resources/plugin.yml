@@ -1,0 +1,8 @@
+main: "cc.dreamcode.codekeys.CodeKeysPlugin"
+version: "1.0.1"
+name: "Dream-CodeKeys"
+description: "Dream-CodeKeys written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "author"
+prefix: "Dream-CodeKeys-Bukkit"
+api-version: 1.13

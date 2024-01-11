@@ -1,0 +1,6 @@
+rootProject.name = 'dream-time-command'
+
+include 'bukkit'
+include 'bukkit:mcversion:api'
+include 'bukkit:mcversion:v1_8_R3'
+include 'bukkit:mcversion:v1_13_R1'

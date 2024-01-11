@@ -1,0 +1,74 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+
+group 'com.eripe14'
+version '1.0-SNAPSHOT'
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+
+    maven { url "https://papermc.io/repo/repository/maven-public/" }
+    maven { url "https://storehouse.okaeri.eu/repository/maven-public/" }
+    maven { url "https://repo.panda-lang.org/releases" }
+}
+
+dependencies {
+    implementation files('E:/Dream-Basis_Bukkit.jar')
+
+    // paper api
+    compileOnly "org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT"
+
+    // annotations for plugins
+    compileOnly "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+    annotationProcessor "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+
+    // okaeri json
+    implementation 'eu.okaeri:okaeri-configs-json-simple:4.0.0-beta10'
+
+    // okaeri persistence (data)
+    implementation 'eu.okaeri:okaeri-persistence-flat:1.5.11-beta7'
+
+    // plugin addons
+    compileOnly "net.dzikoysk.funnyguilds:plugin:4.10.2"
+    compileOnly 'me.clip:placeholderapi:2.11.1'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation "org.spigotmc:spigot:1.18-R0.1-SNAPSHOT"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+shadowJar {
+    libsDirName = "E:/==WORK==/1.8.8/plugins/"
+    archiveFileName = "Dream-Prestize (1.8-1.18).jar"
+    
+    exclude "org.panda-lang.utility"
+
+    relocate "eu.okaeri", "com.eripe14.libs.eu.okaeri"
+    relocate "fr.mrmicky", "com.eripe14.libs.fr.mrmicky"
+    relocate "com.cryptomorin.xseries", "com.eripe14.utils"
+
+    minimize()
+}

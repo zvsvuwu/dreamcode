@@ -1,0 +1,8 @@
+main: "cc.dreamcode.shulker.ShulkerPlugin"
+version: "2.0.10"
+name: "Dream-Shulker"
+description: "Dream-Shulker plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "SnoxMox, rewrite 2.0 by Ravis96"
+prefix: "Dream-Shulker-Bukkit"
+api-version: 1.13

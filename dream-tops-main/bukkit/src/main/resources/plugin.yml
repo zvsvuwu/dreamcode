@@ -1,0 +1,8 @@
+main: "cc.dreamcode.tops.BukkitTopsPlugin"
+version: "1.0"
+name: "Dream-Tops"
+description: "Dream-Tops written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Nightusio"
+prefix: "Dream-Tops-Bukkit"
+api-version: 1.13

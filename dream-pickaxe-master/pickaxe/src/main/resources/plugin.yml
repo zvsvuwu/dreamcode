@@ -1,0 +1,7 @@
+main: "cc.dreamcode.pickaxe.DreamPickaxePlugin"
+version: "1.0"
+name: "Dream-Pickaxe"
+description: "Dream-Pickaxe plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "nifeno"
+api-version: 1.13

@@ -1,0 +1,9 @@
+main: "cc.dreamcode.spawn.SpawnPlugin"
+version: "1.0.1"
+name: "Dream-Spawn"
+description: "Dream-Spawn written by Kajteh_"
+website: "https://dreamcode.cc"
+author: "Kajteh_"
+prefix: "Dream-Spawn-Bukkit"
+api-version: 1.13
+softdepend: [WorldGuard]

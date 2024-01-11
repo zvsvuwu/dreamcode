@@ -1,0 +1,8 @@
+main: "cc.dreamcode.shopforkills.ShopPlugin"
+version: "1.0.3"
+name: "Dream-ShopForKills"
+description: "Dream-ShopForKills written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "eastcause"
+prefix: "Dream-ShopForKills-Bukkit"
+api-version: 1.13

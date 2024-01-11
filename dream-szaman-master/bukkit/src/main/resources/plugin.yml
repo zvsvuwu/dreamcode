@@ -1,0 +1,10 @@
+main: "cc.dreamcode.shaman.SzamanPlugin"
+version: "1.1.2"
+name: "Dream-Szaman"
+description: "Dream-szaman written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "eastcause"
+prefix: "Dream-Szaman"
+api-version: 1.13
+softdepend:
+  - Vault

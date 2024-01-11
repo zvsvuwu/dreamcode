@@ -1,0 +1,10 @@
+main: "cc.dreamcode.itemchange.ItemChangePlugin"
+version: "1.0.2"
+name: "Dream-ItemChange"
+description: "Dream-ItemChange written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "torobolin"
+prefix: "Dream-ItemChange-Bukkit"
+api-version: 1.13
+softdepend:
+  - Vault

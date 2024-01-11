@@ -1,0 +1,101 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+
+group 'xyz.ravis96'
+version '1.1-BETA'
+
+repositories {
+    mavenCentral()
+    maven { url "https://papermc.io/repo/repository/maven-public/" }
+    maven { url "https://storehouse.okaeri.eu/repository/maven-public" }
+    maven { url "https://repo.panda-lang.org/releases" }
+    maven { url "https://maven.enginehub.org/repo" }
+}
+
+dependencies {
+    // -- spigot api --
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+
+    // -- bukkit plugin.yml replacer --
+    compileOnly "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+    annotationProcessor "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+
+    // -- configs --
+    implementation "eu.okaeri:okaeri-configs-yaml-bukkit:4.0.0-beta10"
+    implementation "eu.okaeri:okaeri-configs-serdes-bukkit:4.0.0-beta10"
+
+    // -- json configure --
+    implementation 'eu.okaeri:okaeri-configs-json-simple:4.0.0-beta17'
+
+    // -- persistence --
+    implementation 'eu.okaeri:okaeri-persistence-flat:1.5.11-beta9'
+    implementation 'eu.okaeri:okaeri-persistence-jdbc:1.5.11-beta9'
+    implementation 'eu.okaeri:okaeri-persistence-mongo:1.5.11-beta9'
+    implementation 'eu.okaeri:okaeri-persistence-redis:1.5.11-beta9'
+
+    // -- additional jdbc backend --
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
+    implementation 'com.h2database:h2:2.1.212'
+
+    // -- tasker --
+    implementation 'eu.okaeri:okaeri-tasker-bukkit:1.1.2'
+
+    // -- funny commands --
+    implementation "net.dzikoysk:funnycommands:0.5.1"
+
+    // -- xseries utilities --
+    implementation 'com.github.cryptomorin:XSeries:8.7.1'
+
+    // -- scoreboards --
+    implementation 'fr.mrmicky:fastboard:1.2.1'
+
+    // -- for cleaner class <Lombok> --
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    // -- maybe required <Jupiter> --
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+idea {
+    project {
+        jdkName = "17"
+        languageLevel = "8"
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+shadowJar {
+    //libsDirName = "P:/1.18/plugins"
+    archiveFileName = "Dream-Kit ${project.version} (1.8-1.18).jar"
+
+    relocate "eu.okaeri", "xyz.ravis96.dreamkit.libs.eu.okaeri"
+    relocate "io.lettuce", "xyz.ravis96.dreamkit.libs.io.lettuce"
+    relocate "io.netty", "xyz.ravis96.dreamkit.libs.io.netty"
+    relocate "reactor", "xyz.ravis96.dreamkit.libs.reactor"
+    relocate "org.reactivestreams", "xyz.ravis96.dreamkit.libs.org.reactivestreams"
+    relocate "org.bson", "xyz.ravis96.dreamkit.libs.org.bson"
+    relocate "com.mongodb", "xyz.ravis96.dreamkit.libs.com.mongodb"
+    relocate "com.zaxxer", "xyz.ravis96.dreamkit.libs.com.zaxxer"
+    relocate "org.slf4j", "xyz.ravis96.dreamkit.libs.org.slf4j"
+    relocate "org.mariadb", "xyz.ravis96.dreamkit.libs.org.mariadb"
+    relocate "org.h2", "xyz.ravis96.dreamkit.libs.org.h2"
+    relocate "org.json", "xyz.ravis96.dreamkit.libs.org.json"
+    relocate "net.dzikoysk", "xyz.ravis96.dreamkit.libs.net.dzikoysk"
+    relocate "fr.mrmicky", "xyz.ravis96.dreamkit.libs.fr.mrmicky"
+    relocate "com.cryptomorin.xseries", "xyz.ravis96.dreamkit.utils"
+
+    minimize()
+}

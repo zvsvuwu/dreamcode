@@ -1,0 +1,8 @@
+main: "cc.dreamcode.fortune.FortunePlugin"
+version: "1.0"
+name: "Dream-Fortune"
+description: "Dream-Fortune written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Nightusio"
+prefix: "Dream-Fortune"
+api-version: 1.13

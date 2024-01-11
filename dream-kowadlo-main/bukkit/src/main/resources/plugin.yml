@@ -1,0 +1,8 @@
+main: "cc.dreamcode.anvil.BukkitAnvilPlugin"
+version: "1.0"
+name: "Dream-Kowadlo"
+description: "Dream-Kowadlo written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Nightusio"
+prefix: "Dream-Kowadlo-Bukkit"
+api-version: 1.13

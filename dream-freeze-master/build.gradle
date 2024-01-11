@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+
+group 'xyz.ravis96'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://papermc.io/repo/repository/maven-public/" }
+}
+
+dependencies {
+    implementation files('P:/Dream-Basis (Bukkit).jar')
+
+    // paper api
+    compileOnly "org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT"
+
+    // annotations for plugins
+    compileOnly "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+    annotationProcessor "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testImplementation "org.spigotmc:spigot-api:1.18-R0.1-SNAPSHOT"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+idea {
+    project {
+        jdkName = "17"
+        languageLevel = "8"
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+shadowJar {
+    //libsDirName = "P:/1.18/plugins"
+    archiveFileName = "Dream-Freeze (1.8-1.18).jar"
+
+    relocate "eu.okaeri", "xyz.ravis96.dreamfreeze.libs.eu.okaeri"
+    relocate "net.dzikoysk", "xyz.ravis96.dreamfreeze.libs.net.dzikoysk"
+    relocate "fr.mrmicky", "xyz.ravis96.dreamfreeze.libs.fr.mrmicky"
+    relocate "com.cryptomorin.xseries", "xyz.ravis96.dreamfreeze.utils"
+
+    minimize()
+}

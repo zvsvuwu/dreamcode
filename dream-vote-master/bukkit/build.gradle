@@ -1,0 +1,69 @@
+repositories {
+    maven { url "https://repo.codemc.io/repository/nms" }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+dependencies {
+    // -- spigot api -- (base)
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+
+    // -- configs--
+    implementation "eu.okaeri:okaeri-configs-yaml-bukkit:4.0.8"
+    implementation "eu.okaeri:okaeri-configs-serdes-bukkit:4.0.8"
+    implementation "eu.okaeri:okaeri-configs-serdes-commons:4.0.8"
+
+    // -- injector --
+    implementation 'eu.okaeri:okaeri-injector:2.1.0'
+
+    // -- placeholders --
+    implementation 'eu.okaeri:okaeri-placeholders-bukkit:4.0.3'
+
+    // -- Multi-Version Items helper --
+    implementation 'com.github.cryptomorin:XSeries:9.2.0'
+
+    // -- dream-platform --
+    implementation "cc.dreamcode.platform:core:1.4"
+    implementation "cc.dreamcode.platform:bukkit:1.4"
+
+    // -- dream-utilities --
+    implementation "cc.dreamcode:utilities:1.0.5"
+    implementation "cc.dreamcode:utilities-bukkit:1.0.5"
+
+    // -- dream-notice --
+    implementation "cc.dreamcode.notice:core:1.1.1"
+    implementation "cc.dreamcode.notice:bukkit:1.1.1"
+    implementation "cc.dreamcode.notice:bukkit-okaeri-serdes:1.1.1"
+
+    // -- dream-command --
+    implementation "cc.dreamcode.command:core:1.2.1"
+    implementation "cc.dreamcode.command:bukkit:1.2.1"
+}
+
+shadowJar {
+    checkstyleTest
+
+    archiveFileName = "Dream-Vote-Bukkit-${project.version}.jar"
+
+    minimize()
+
+    relocate "com.cryptomorin", "cc.dreamcode.vote.libs.com.cryptomorin"
+    relocate "eu.okaeri", "cc.dreamcode.vote.libs.eu.okaeri"
+    relocate "net.kyori", "cc.dreamcode.vote.libs.net.kyori"
+
+    relocate "cc.dreamcode.platform", "cc.dreamcode.vote.libs.cc.dreamcode.platform"
+    relocate "cc.dreamcode.utilities", "cc.dreamcode.vote.libs.cc.dreamcode.utilities"
+    relocate "cc.dreamcode.menu", "cc.dreamcode.vote.libs.cc.dreamcode.menu"
+    relocate "cc.dreamcode.command", "cc.dreamcode.vote.libs.cc.dreamcode.command"
+    relocate "cc.dreamcode.notice", "cc.dreamcode.vote.libs.cc.dreamcode.notice"
+
+    relocate "io.lettuce", "cc.dreamcode.vote.libs.io.lettuce"
+    relocate "io.netty", "cc.dreamcode.vote.libs.io.netty"
+    relocate "reactor", "cc.dreamcode.vote.libs.reactor"
+    relocate "org.reactivestreams", "cc.dreamcode.vote.libs.org.reactivestreams"
+    relocate "org.bson", "cc.dreamcode.vote.libs.org.bson"
+    relocate "com.mongodb", "cc.dreamcode.vote.libs.com.mongodb"
+    relocate "com.zaxxer", "cc.dreamcode.vote.libs.com.zaxxer"
+    relocate "org.slf4j", "cc.dreamcode.vote.libs.org.slf4j"
+    relocate "org.mariadb", "cc.dreamcode.vote.libs.org.mariadb"
+    relocate "org.json", "cc.dreamcode.vote.libs.org.json"
+}

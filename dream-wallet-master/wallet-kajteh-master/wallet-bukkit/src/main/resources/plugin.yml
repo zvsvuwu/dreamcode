@@ -1,0 +1,12 @@
+main: "cc.dreamcode.wallet.WalletPlugin"
+version: "1.0.4"
+name: "Dream-Wallet"
+description: "Dream-Wallet plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Ravis96"
+prefix: "Dream-Wallet-Bukkit"
+api-version: 1.13
+
+softdepend:
+  - PlaceholderAPI
+  - Citizens

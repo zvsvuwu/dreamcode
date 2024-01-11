@@ -1,0 +1,8 @@
+main: "cc.dreamcode.vote.BukkitVotePlugin"
+version: "1.0"
+name: "Dream-Vote"
+description: "Dream-Vote written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "author"
+prefix: "Dream-Vote-Bukkit"
+api-version: 1.13

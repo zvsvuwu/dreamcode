@@ -1,0 +1,3 @@
+rootProject.name = 'dream-wallet'
+
+include ':wallet-bukkit'

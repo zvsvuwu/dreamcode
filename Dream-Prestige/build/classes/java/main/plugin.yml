@@ -1,0 +1,11 @@
+# Auto-generated plugin.yml, generated at 2022/07/10 22:10:59 by org.bukkit.plugin.java.annotation.PluginAnnotationProcessor
+
+main: com.eripe14.prestige.PrestigePlugin
+name: Dream-Prestige
+version: 1.0.0
+author: eripe14
+softdepend:
+- FunnyGuilds
+commands: {}
+permissions: {}
+api-version: '1.13'

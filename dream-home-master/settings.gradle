@@ -1,0 +1,3 @@
+rootProject.name = 'dream-home'
+
+include 'bukkit'

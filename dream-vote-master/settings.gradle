@@ -1,0 +1,3 @@
+rootProject.name = 'dream-vote'
+
+include 'bukkit'
