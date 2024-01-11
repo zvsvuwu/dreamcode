@@ -1,0 +1,9 @@
+main: "cc.dreamcode.totem.TotemPlugin"
+version: "1.0.6"
+name: "Dream-Totem"
+description: "Dream-Totem plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Sayler"
+prefix: "Dream-Totem-Bukkit"
+api-version: 1.13
+depend: [Vault]

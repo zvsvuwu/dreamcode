@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dcElytra:jar">
+    <output-path>D:/Serwer Spigot/1.16.5/plugins</output-path>
+    <root id="archive" name="dcElytra.jar">
+      <element id="module-output" name="dcElytra" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/okaeri/okaeri-configs-serdes-bukkit/3.4.2/okaeri-configs-serdes-bukkit-3.4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/okaeri/okaeri-configs-yaml-bukkit/3.4.2/okaeri-configs-yaml-bukkit-3.4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/okaeri/okaeri-configs-core/3.4.2/okaeri-configs-core-3.4.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

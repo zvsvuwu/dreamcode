@@ -1,0 +1,9 @@
+name: dcStrefaAfk
+version: Beta 1.0
+main: pl.virtual.strefa.main.Main
+author: Virtual343
+website: DreamCode - https://discord.gg/gVGuhgqSs3
+api-version: 1.16
+softdepend:
+  - WorldEdit
+  - WorldGuard

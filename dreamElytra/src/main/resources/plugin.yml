@@ -1,0 +1,9 @@
+name: Dream-Elytra
+version: Beta 2.0
+main: pl.virtual.elytra.main.Main
+author: Virtual343
+website: DreamCode - https://discord.gg/gVGuhgqSs3
+api-version: 1.16
+softdepend:
+  - WorldEdit
+  - WorldGuard
