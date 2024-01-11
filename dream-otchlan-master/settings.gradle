@@ -1,0 +1,3 @@
+rootProject.name = 'dream-otchlan'
+
+include 'otchlan-core'

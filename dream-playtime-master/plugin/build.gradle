@@ -1,0 +1,89 @@
+dependencies {
+    // -- bukkit-nms --
+    project(":nms").getSubprojects().forEach(nms -> implementation nms)
+
+    // -- spigot api --
+    compileOnly 'org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT'
+
+    // -- bukkit plugin.yml replacer --
+    compileOnly "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+    annotationProcessor "org.spigotmc:plugin-annotations:1.2.3-SNAPSHOT"
+
+    // -- configs--
+    implementation "eu.okaeri:okaeri-configs-yaml-bukkit:4.0.6"
+    implementation "eu.okaeri:okaeri-configs-serdes-bukkit:4.0.6"
+    implementation "eu.okaeri:okaeri-configs-serdes-commons:4.0.6"
+
+    // -- json configure --
+    implementation 'eu.okaeri:okaeri-configs-json-simple:4.0.6'
+
+    // -- injector --
+    implementation 'eu.okaeri:okaeri-injector:2.1.0'
+
+    // -- placeholders --
+    implementation 'eu.okaeri:okaeri-placeholders-bukkit:4.0.3'
+
+    // -- scoreboard --
+    implementation 'fr.mrmicky:fastboard:1.2.1'
+
+    // -- NMS Items helper --
+    implementation 'com.github.cryptomorin:XSeries:9.1.0'
+
+    // -- NBT-API --
+    implementation 'de.tr7zw:item-nbt-api-plugin:2.10.0'
+
+    // -- dream-platform --
+    implementation "cc.dreamcode.platform:core:1.0.8"
+    implementation "cc.dreamcode.platform:bukkit:1.0.8"
+
+    // -- dream-utilities --
+    implementation "cc.dreamcode:utilities:1.0.1"
+    implementation "cc.dreamcode:utilities-bukkit:1.0.1"
+
+    // -- dream-notice --
+    implementation "cc.dreamcode.notice:core:1.1"
+    implementation "cc.dreamcode.notice:bukkit:1.1"
+    implementation "cc.dreamcode.notice:bukkit-okaeri-serdes:1.1"
+
+    // -- dream-command --
+    implementation "cc.dreamcode.command:core:1.1"
+    implementation "cc.dreamcode.command:bukkit:1.1"
+
+    // -- dream-menu --
+    implementation "cc.dreamcode.menu:core:0.3.6"
+    implementation "cc.dreamcode.menu:bukkit:0.3.6"
+    implementation "cc.dreamcode.menu:serdes-bukkit:0.3.6"
+    implementation "cc.dreamcode.menu:serdes-bukkit-okaeri:0.3.6"
+}
+
+shadowJar {
+    checkstyleTest
+
+    archiveFileName = "Dream-PlayTime-${project.version} (MC 1.8-1.19).jar"
+
+    minimize()
+
+    relocate "com.cryptomorin", "cc.dreamcode.playtime.libs.com.cryptomorin"
+    relocate "eu.okaeri", "cc.dreamcode.playtime.libs.eu.okaeri"
+    relocate "de.tr7zw", "cc.dreamcode.playtime.libs.de.tr7zw"
+    relocate "fr.mrmicky.fastboard", "cc.dreamcode.playtime.libs.fastboard"
+    relocate "com.iridium", "cc.dreamcode.playtime.libs.com.iridium"
+    relocate "net.kyori.adventure", "cc.dreamcode.playtime.libs.net.kyori.adventure"
+
+    relocate "cc.dreamcode.platform", "cc.dreamcode.playtime.libs.cc.dreamcode.platform"
+    relocate "cc.dreamcode.utilities", "cc.dreamcode.playtime.libs.cc.dreamcode.utilities"
+    relocate "cc.dreamcode.menu", "cc.dreamcode.playtime.libs.cc.dreamcode.menu"
+    relocate "cc.dreamcode.command", "cc.dreamcode.playtime.libs.cc.dreamcode.command"
+    relocate "cc.dreamcode.notice", "cc.dreamcode.playtime.libs.cc.dreamcode.notice"
+
+    relocate "io.lettuce", "cc.dreamcode.playtime.libs.io.lettuce"
+    relocate "io.netty", "cc.dreamcode.playtime.libs.io.netty"
+    relocate "reactor", "cc.dreamcode.playtime.libs.reactor"
+    relocate "org.reactivestreams", "cc.dreamcode.playtime.libs.org.reactivestreams"
+    relocate "org.bson", "cc.dreamcode.playtime.libs.org.bson"
+    relocate "com.mongodb", "cc.dreamcode.playtime.libs.com.mongodb"
+    relocate "com.zaxxer", "cc.dreamcode.playtime.libs.com.zaxxer"
+    relocate "org.slf4j", "cc.dreamcode.playtime.libs.org.slf4j"
+    relocate "org.mariadb", "cc.dreamcode.playtime.libs.org.mariadb"
+    relocate "org.json", "cc.dreamcode.playtime.libs.org.json"
+}
