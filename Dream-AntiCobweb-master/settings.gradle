@@ -1,0 +1,3 @@
+rootProject.name = 'Dream-AntiCobweb'
+
+include 'bukkit'

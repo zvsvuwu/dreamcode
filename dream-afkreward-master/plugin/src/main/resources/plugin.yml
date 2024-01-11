@@ -1,0 +1,8 @@
+main: "cc.dreamcode.afkreward.AfkRewardPlugin"
+version: "1.1"
+name: "Dream-AfkReward"
+description: "Dream-AfkReward plugin written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "torobolin"
+prefix: "Dream-AfkReward-Bukkit"
+api-version: 1.13

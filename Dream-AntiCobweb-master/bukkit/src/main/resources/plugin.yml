@@ -1,0 +1,8 @@
+main: "cc.dreamcode.anticobweb.AntiCobwebPlugin"
+version: "1.0"
+name: "Dream-AntiCobweb"
+description: "Dream-AntiCobweb written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Codestech"
+prefix: "AntiCobweb-Bukkit"
+api-version: 1.13

@@ -1,0 +1,10 @@
+main: "cc.dreamcode.antygrief.AntyGriefPlugin"
+version: "1.0"
+name: "Dream-AntyGrief"
+description: "Dream-AntyGrief written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "torobolin"
+prefix: "Dream-AntyGrief-Bukkit"
+api-version: 1.13
+softdepend:
+  - FunnyGuilds

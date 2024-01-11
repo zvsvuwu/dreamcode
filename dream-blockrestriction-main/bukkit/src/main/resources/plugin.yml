@@ -1,0 +1,8 @@
+main: "cc.dreamcode.zonebox.ZoneBoxPlugin"
+version: "1.0.4"
+name: "Dream-ZoneBox"
+description: "Dream-ZoneBox written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Nightusio"
+prefix: "Dream-ZoneBox"
+api-version: 1.13
