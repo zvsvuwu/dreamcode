@@ -1,0 +1,8 @@
+main: "cc.dreamcode.automessage.AutoMessagePlugin"
+version: "1.0"
+name: "Dream-AutoMessage"
+description: "Dream-AutoMessage written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "Nightusio"
+prefix: "Dream-AutoMessage-Bukkit"
+api-version: 1.13
