@@ -1,0 +1,8 @@
+main: "cc.dreamcode.enderchest.EnderchestPlugin"
+version: "1.0"
+name: "Dream-Enderchest"
+description: "Dream-Enderchest written by dreamcode.cc"
+website: "https://dreamcode.cc"
+author: "eastcause"
+prefix: "Dream-Enderchest-Bukkit"
+api-version: 1.13
